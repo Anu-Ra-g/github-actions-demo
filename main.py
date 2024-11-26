@@ -8,10 +8,12 @@ app = Flask(__name__)
 
 @app.route("/<random_string>")
 def return_backwards(random_string):
+    # reverses a string
     return "".join(reversed(random_string))
 
 @app.route("/get-mode")
 def get_mode():
+    # gets the environment
     return os.environ.get("MODE")
 
 if __name__ == "__main__":
